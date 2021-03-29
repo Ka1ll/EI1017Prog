@@ -25,4 +25,16 @@ public class Persona {
     public List<String> getListaTareas() {
         return ListaTareas;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public void setListaTareas(List<String> listaTareas) {
+        ListaTareas = listaTareas;
+    }
 }

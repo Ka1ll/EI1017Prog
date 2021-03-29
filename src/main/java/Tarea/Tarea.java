@@ -15,7 +15,7 @@ public class Tarea  {
     Fecha fechaInicio;
     Fecha fechaFinal;
     boolean finalizada;
-    //Resultado
+    Resultado resultado;
     List<String> listaEtiquetas;
 
     public Tarea(String titulo, String descripcion, List<Persona> personaAsignadas, Persona responsable, int prioridad, Fecha fechaInicio, Fecha fechaFinal, boolean finalizada,Resultado resultado, List<String> listaEtiquetas) {
@@ -27,7 +27,9 @@ public class Tarea  {
         this.fechaInicio = fechaInicio;
         this.fechaFinal = fechaFinal;
         this.finalizada = finalizada;
+        this.resultado = resultado;
         this.listaEtiquetas = listaEtiquetas;
+
     }
 
 

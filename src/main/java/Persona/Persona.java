@@ -1,12 +1,14 @@
+package Persona;
+
 import java.util.List;
 
-public class persona {
+public class Persona {
        String nombre;
        String correo;
        List<String> ListaTareas;
 
 
-    public persona(String nombre, String correo, List<String> listaTareas) {
+    public Persona(String nombre, String correo, List<String> listaTareas) {
         this.nombre = nombre;
         this.correo = correo;
         ListaTareas = listaTareas;

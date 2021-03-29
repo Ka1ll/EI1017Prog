@@ -23,11 +23,6 @@ public class Fecha {
         return año;
     }
 
-    @Override
-    public String toString() {
-        return "Fecha{" + dia + mes + año +'}';
-    }
-
     public void setDia(int dia) {
         this.dia = dia;
     }
@@ -38,5 +33,14 @@ public class Fecha {
 
     public void setAño(int año) {
         this.año = año;
+    }
+
+    @Override
+    public String toString() {
+        return "Fecha{" +
+                "/" + dia +
+                "/" + mes +
+                "/" + año +
+                '}';
     }
 }

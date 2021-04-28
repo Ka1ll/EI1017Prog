@@ -1,13 +1,15 @@
 package Menu;
 
 public enum OpcionesMenu {
-        NUEVO_PROYECTO("Iniciar nuevo proyecto."),
+        SALIR("Salir del menu"),
+        NUEVO_PROYECTO("Cambiar nombre al proyecto."),
         ALTA_PERSONAS("Dar de alta a las personas que trabajan en el proyecto."),
         ALTA_TAREAS("Dar de alta una tarea."),
         FINALIZAR_TAREA("Marcar una tarea como finalizada."),
         INTRODUCIR_ELIMINAR_PERSONA("Introducir o eliminar una persona de una tarea."),
         MOSTRAR_LISTA_PERSONAS("Mostrar lista de personas asignadas a un proyecto"),
-        MOSTRAR_TAREAS_PROYECTO("Mostrar las tareas de un proyecto ()");
+        MOSTRAR_TAREAS_PROYECTO("Mostrar las tareas de un proyecto");
+
 
         private String descripcion;
 
@@ -32,6 +34,5 @@ public enum OpcionesMenu {
             }
             return sb.toString();
         }
-
 
 }

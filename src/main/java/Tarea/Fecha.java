@@ -1,4 +1,4 @@
-package Tarea;
+/*package Tarea;
 
 public class Fecha {
     int dia;
@@ -34,13 +34,4 @@ public class Fecha {
     public void setAño(int año) {
         this.año = año;
     }
-
-    @Override
-    public String toString() {
-        return "Fecha{" +
-                "/" + dia +
-                "/" + mes +
-                "/" + año +
-                '}';
-    }
-}
+}*/

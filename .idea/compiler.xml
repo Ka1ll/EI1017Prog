@@ -9,5 +9,8 @@
         <module name="EI1017Prog" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EI1017Prog" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

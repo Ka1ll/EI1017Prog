@@ -1,6 +1,7 @@
 package Tarea;
 
 
+import Facturacion.Calculo;
 import Genericos.tieneClave;
 import Genericos.tieneLista;
 import Persona.Persona;
@@ -21,8 +22,10 @@ public class Tarea implements tieneLista, tieneClave, Serializable {
     private boolean finalizada;
     private Resultado resultado;
     private List<String> listaEtiquetas;        //EDITABLE, AÑADIR Y BORRAR
+    private double coste;
+    private Calculo facturacion;
 
-    public Tarea(String titulo, String descripcion, List<Persona> personasAsignadas, Persona responsable, int prioridad, LocalDate fechaInicio, LocalDate fechaFinal, boolean finalizada, Resultado resultado, List<String> listaEtiquetas) {
+    public Tarea(String titulo, String descripcion, List<Persona> personasAsignadas, Persona responsable, int prioridad, LocalDate fechaInicio, LocalDate fechaFinal, boolean finalizada, Resultado resultado, List<String> listaEtiquetas,double coste, Calculo facturacion) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.personasAsignadas = personasAsignadas;
@@ -33,6 +36,8 @@ public class Tarea implements tieneLista, tieneClave, Serializable {
         this.finalizada = finalizada;
         this.resultado = resultado;
         this.listaEtiquetas = listaEtiquetas;
+        this.coste = coste;
+        this.facturacion = facturacion;
     }
 
     public String getTitulo() {
@@ -113,6 +118,22 @@ public class Tarea implements tieneLista, tieneClave, Serializable {
 
     public void setListaEtiquetas(List<String> listaEtiquetas) {
         this.listaEtiquetas = listaEtiquetas;
+    }
+
+    public double getCoste() {
+        return coste;
+    }
+
+    public void setCoste(double coste) {
+        this.coste = coste;
+    }
+
+    public Calculo getFacturacion() {
+        return facturacion;
+    }
+
+    public void setFacturacion(Calculo facturacion) {
+        this.facturacion = facturacion;
     }
 
     @Override

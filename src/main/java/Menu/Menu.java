@@ -7,7 +7,7 @@ import Proyecto.Proyecto;
 import java.io.IOException;
 import java.util.Scanner;
 
-import static Metodos.MetodosMenu.cambiarNombreProyecto;
+import static Metodos.MetodosMenu.*;
 
 public class Menu {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
@@ -40,6 +40,7 @@ public class Menu {
                     cambiarNombreProyecto(proyectoActual);
                     break;
                 case ALTA_PERSONAS:     //Añadir personas
+                    altaPersona(proyectoActual);
                         break;
                 case ALTA_TAREAS:
                     MetodosMenu.añadirTarea(proyectoActual);
@@ -50,7 +51,14 @@ public class Menu {
                 case INTRODUCIR_ELIMINAR_PERSONA:
                     MetodosMenu.añadirPersonaATarea(proyectoActual);
                     break;
+                case RESPONSABLE_DE_TAREA:
+                    añadirResponsable(proyectoActual);
+                    break;
+                case MODIFICAR_FACTURACION:
+                    modificarFacturacion(proyectoActual);
+                    break;
                 case MOSTRAR_LISTA_PERSONAS:
+                    mostrarPersonas(proyectoActual);
                     break;
                 case MOSTRAR_TAREAS_PROYECTO:
                     MetodosMenu.mostrarTareas(proyectoActual);
@@ -61,20 +69,6 @@ public class Menu {
                     sc.close();
                     break;
             } //switch
-
-            /*if (algoMas) {
-                System.out.println("Quiere hacer alguna otra operación?\n\t1. Si\n\t2. No");
-                System.out.flush();
-                int mas = sc.nextInt();
-                while(mas < 1 || mas > 2){
-                    System.out.println("Selecione una opción correcta por favor");
-                    mas = sc.nextInt();
-                }
-                if(mas==2){
-                    algoMas=false;
-                    sc.close();
-                }
-            } //IF algoMas*/
         } //While
         proyectoActual.escribirDatos();
     }//Main

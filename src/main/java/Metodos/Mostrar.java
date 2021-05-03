@@ -4,10 +4,7 @@ import Persona.Persona;
 import Proyecto.Proyecto;
 import Tarea.Tarea;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Mostrar {
@@ -22,4 +19,5 @@ public class Mostrar {
             return new Proyecto(nombre, new ArrayList<Persona>(), new ArrayList<Tarea>());
         }
     }
+
 }

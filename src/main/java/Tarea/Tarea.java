@@ -4,8 +4,10 @@ package Tarea;
 import Genericos.tieneClave;
 import Genericos.tieneLista;
 import Persona.Persona;
+import Resultado.Resultado;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Tarea implements tieneLista, tieneClave, Serializable {
@@ -14,13 +16,13 @@ public class Tarea implements tieneLista, tieneClave, Serializable {
     private List<Persona> personasAsignadas;    //EDITABLE METODO ADD y ELIM
     private Persona responsable;                //EDITABLE METODO ADD y ELIM
     private int prioridad;
-    private String fechaInicio;
-    private String fechaFinal;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFinal;
     private boolean finalizada;
     private Resultado resultado;
     private List<String> listaEtiquetas;        //EDITABLE, AÑADIR Y BORRAR
 
-    public Tarea(String titulo, String descripcion, List<Persona> personasAsignadas, Persona responsable, int prioridad, String fechaInicio, String fechaFinal, boolean finalizada, Resultado resultado, List<String> listaEtiquetas) {
+    public Tarea(String titulo, String descripcion, List<Persona> personasAsignadas, Persona responsable, int prioridad, LocalDate fechaInicio, LocalDate fechaFinal, boolean finalizada, Resultado resultado, List<String> listaEtiquetas) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.personasAsignadas = personasAsignadas;
@@ -73,19 +75,19 @@ public class Tarea implements tieneLista, tieneClave, Serializable {
         this.prioridad = prioridad;
     }
 
-    public String getFechaInicio() {
+    public LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(String fechaInicio) {
+    public void setFechaInicio(LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public String getFechaFinal() {
+    public LocalDate getFechaFinal() {
         return fechaFinal;
     }
 
-    public void setFechaFinal(String fechaFinal) {
+    public void setFechaFinal(LocalDate fechaFinal) {
         this.fechaFinal = fechaFinal;
     }
 

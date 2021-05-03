@@ -1,5 +1,6 @@
 package Menu;
 
+import Metodos.MetodosMenu;
 import Metodos.Mostrar;
 import Proyecto.Proyecto;
 
@@ -10,12 +11,10 @@ import static Metodos.MetodosMenu.cambiarNombreProyecto;
 
 public class Menu {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        //PEdir proyecto
         System.out.println("Que nombre de proyecto quieres abrir o crear: ");
         Scanner sc = new Scanner(System.in);
         String nombre = sc.nextLine();
         Proyecto proyectoActual = Mostrar.iniciarProyecto(nombre);
-
 
         boolean algoMas = true;
         while (algoMas) {
@@ -41,18 +40,20 @@ public class Menu {
                     cambiarNombreProyecto(proyectoActual);
                     break;
                 case ALTA_PERSONAS:     //Añadir personas
-
                         break;
                 case ALTA_TAREAS:
+                    MetodosMenu.añadirTarea(proyectoActual);
                     break;
                 case FINALIZAR_TAREA:
+                    MetodosMenu.finalizarTarea(proyectoActual);
                     break;
-
                 case INTRODUCIR_ELIMINAR_PERSONA:
+                    MetodosMenu.añadirPersonaATarea(proyectoActual);
                     break;
                 case MOSTRAR_LISTA_PERSONAS:
                     break;
                 case MOSTRAR_TAREAS_PROYECTO:
+                    MetodosMenu.mostrarTareas(proyectoActual);
                     break;
                 case SALIR:
                     System.out.println("Adios");
@@ -61,8 +62,9 @@ public class Menu {
                     break;
             } //switch
 
-            if (algoMas) {
+            /*if (algoMas) {
                 System.out.println("Quiere hacer alguna otra operación?\n\t1. Si\n\t2. No");
+                System.out.flush();
                 int mas = sc.nextInt();
                 while(mas < 1 || mas > 2){
                     System.out.println("Selecione una opción correcta por favor");
@@ -72,7 +74,8 @@ public class Menu {
                     algoMas=false;
                     sc.close();
                 }
-            } //IF algoMas
+            } //IF algoMas*/
         } //While
+        proyectoActual.escribirDatos();
     }//Main
 }//Class
